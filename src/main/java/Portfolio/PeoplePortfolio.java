@@ -1,4 +1,5 @@
 package Portfolio;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.*;
 
@@ -153,7 +154,14 @@ public class PeoplePortfolio {
 		//used printData method as per description
 		person4.pritnData();
 		
-		
+		ArrayList<Person> list = new ArrayList<Person>();
+        list.add(person1);
+        list.add(person2);
+        list.add(person3);
+        list.add(person4);
+        
+        
+        PeopleStat.ageStat (list);
 	}
 
 }
