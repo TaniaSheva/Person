@@ -15,6 +15,7 @@ public class PeopleStat {
 			
 			int quantityUnder20 = 0;
 			int quantityOver20 = 0;
+			
 		    	for (int i=0; i < Person.size(); i++) {
 		    		if (Person.get(i).getAge() > 0 && Person.get(i).getAge() < 20) {
 		    			quantityUnder20 ++;
@@ -59,7 +60,5 @@ public class PeopleStat {
 			handler.setLevel(java.util.logging.Level.INFO);
 			
 		}
-
-
 
 }

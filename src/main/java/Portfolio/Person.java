@@ -1,6 +1,5 @@
 package Portfolio;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.logging.*;
 
 public class Person {
