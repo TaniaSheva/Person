@@ -37,6 +37,7 @@ public class PeoplePortfolio {
 				
 		Person person1 = new Person(name1, surname1, email1, hobby1, age1); 
 		
+		Person.setUpLogger();
 		person1.checkAge(age1);
 		
 		System.out.println("First person:");
@@ -79,6 +80,7 @@ public class PeoplePortfolio {
 		person2.setAge(age2);
 		person2.setHobby(hobby2);
 		
+		Person.setUpLogger();
 		person1.checkAge(age2);
 		
 		System.out.println("Second person:");
@@ -113,6 +115,7 @@ public class PeoplePortfolio {
 		Person person3 = new Person(name3, surname3, email3, hobby3, age3); 
 		//we don't need setters here as we used a constructor with parameters
 		
+		Person.setUpLogger();
 		person1.checkAge(age3);
 		
 		System.out.println("Third person:");
@@ -148,6 +151,7 @@ public class PeoplePortfolio {
 		Person person4 = new Person(name4, surname4, email4, hobby4, age4); 
 		//we don't need setters here as we used a constructor with parameters
 		
+		Person.setUpLogger();
 		person1.checkAge(age4);
 		
 		System.out.println("First person:");
@@ -160,7 +164,7 @@ public class PeoplePortfolio {
         list.add(person3);
         list.add(person4);
         
-        
+        PeopleStat.setUpLogger();
         PeopleStat.ageStat (list);
 	}
 

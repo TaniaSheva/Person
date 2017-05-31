@@ -1,5 +1,6 @@
 package Portfolio;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.*;
 
@@ -14,12 +15,13 @@ public class PeopleStat {
 			
 			int quantityUnder20 = 0;
 			int quantityOver20 = 0;
-				
 		    	for (int i=0; i < Person.size(); i++) {
-		    		if (Person.get(i).getAge() < 20) {
+		    		if (Person.get(i).getAge() > 0 && Person.get(i).getAge() < 20) {
 		    			quantityUnder20 ++;
 		    		}
-		    		else {
+		    		else { 
+		    			if (Person.get(i).getAge() > 0 && Person.get(i).getAge() > 20)
+		    			
 		    			quantityOver20 ++;
 		    		}
 		    	}
@@ -41,6 +43,22 @@ public class PeopleStat {
 	    	     }
 		    	
 			}
+		
+		public static void setUpLogger(){
+			
+			Handler handler = null;
+			
+			try {
+				handler = new FileHandler("Info.log", true);
+				LOGGER.addHandler(handler);
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			handler.setFormatter(new SimpleFormatter());
+			handler.setLevel(java.util.logging.Level.INFO);
+			
+		}
 
 
 

@@ -95,5 +95,21 @@ public class Person {
 		System.out.println("Hobby is: " + getHobby());
 	}
 	
+	public static void setUpLogger(){
+		
+		Handler handler = null;
+		
+		try {
+			handler = new FileHandler("Warning.log", true);
+			LOGGER.addHandler(handler);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		handler.setFormatter(new SimpleFormatter());
+		handler.setLevel(java.util.logging.Level.WARNING);
+		
+	}
+	
 
 }
